@@ -9,11 +9,19 @@ An algorithm to sample a complete session by hashing its key.
 
 ## Example
 ```go
-     hk := NewHKSample(.20)
-     key := []byte(`5efe2993-6b3d-48e2-ac94-1afd543d9190`)
-     if hk.Sample(key) {
-         log.Printf("Sampled: %s", key)
-     }
+package main
+
+import (
+    "log"
+    "github.com/lafikl/hksample"
+)
+func main() {
+    hk := NewHKSample(.20)
+    key := []byte(`5efe2993-6b3d-48e2-ac94-1afd543d9190`)
+    if hk.Sample(key) {
+        log.Printf("Sampled: %s", key)
+    }
+}
 ```
 
 ## Key Features:
