@@ -1,5 +1,5 @@
 # HKSample
-An algorithm to sample a complete session by hashing its key.
+An algorithm to sample a complete session by hashing its key, and then we see if the keys fits in one the buckets within the sampling percentage.
 
 
 ## Installation
