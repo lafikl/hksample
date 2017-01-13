@@ -29,6 +29,8 @@ with a single key/id identifying a complete session.
          log.Printf("Sampled: %s", key)
      }
 
+## Documentation
+[GoDoc](https://godoc.org/github.com/lafikl/hksample)
 
 
 # License
