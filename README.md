@@ -2,6 +2,20 @@
 An algorithm to sample a complete session by hashing its key.
 
 
+## Installation
+
+     go get github.com/lafikl/hksample
+
+
+## Example
+```go
+     hk := NewHKSample(.20)
+     key := []byte(`5efe2993-6b3d-48e2-ac94-1afd543d9190`)
+     if hk.Sample(key) {
+         log.Printf("Sampled: %s", key)
+     }
+```
+
 ## Key Features:
 
 - Guarantees that if an event is chosen it'll always pick it in the following messages, unless the sampling percentage was reduced.
@@ -16,18 +30,6 @@ I needed it to build a tracing system that samples a complete session/flow,
 to gain visibility on a data pipeline that receives events/messages
 with a single key/id identifying a complete session.
 
-
-## Installation
-
-     go get github.com/lafikl/hksample
-
-## Example
-
-     hk := NewHKSample(.20)
-     key := []byte(`5efe2993-6b3d-48e2-ac94-1afd543d9190`)
-     if hk.Sample(key) {
-         log.Printf("Sampled: %s", key)
-     }
 
 ## Documentation
 [GoDoc](https://godoc.org/github.com/lafikl/hksample)
